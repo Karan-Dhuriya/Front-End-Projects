@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@300;500;600&family=Roboto:wght@400;500&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    background: linear-gradient(to right, #99004D 0%,#ff0080 100%);;
+}
+.wrapper{
+    width: 400px;
+    min-height: 460px;
+    min-width: 300px;
+    background-color:  white;
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.wrapper .heading{
+    width: 100%;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    position: relative;
+}
+.wrapper .heading::before{
+    position: absolute;
+    content:"";
+    background: linear-gradient(to right, #99004D 0%,#ff0080 100%);
+    height: 4px;
+    width: 36px;
+    bottom: 5px;
+    left: 0;
+    border-radius: 5px;
+}
+
+.wrapper form .inputs{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.wrapper form .inputs input{
+    height: 100%;
+    width: 100% ;
+    outline: none;
+    border: none;
+    font-size: 15px;
+}
+.wrapper form .inputs .underline:before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: #ccc;
+}
+
+.wrapper form .inputs .underline:after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #99004D 0%,#ff0080 100%);
+    transform: scaleX(0);
+    transform-origin:left;
+    transition: all .4s ease;
+}
+
+.wrapper form .inputs input:focus ~ .underline:after{
+    transform: scaleX(1);
+}
+
+.wrapper form .inputs input[type="submit"]{
+    background: linear-gradient(to right, #99004D 0%,#ff0080 100%);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    transition:  all .3s ease;
+
+}
+.wrapper form .inputs input[type="submit"]:hover{
+    background: linear-gradient(to left, #99004D 0%,#ff0080 100%);
+}
+
+.wrapper .connect{
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+}
+
+.wrapper .social {
+    height: 40px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.wrapper .social .twitter{
+    height: 100%;
+    background: #1D9BF0;
+    text-align: center;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.wrapper .social .facebook{
+    height: 100%;
+    background: #0165E1;
+    text-align: center;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.wrapper .social .twitter a,
+.wrapper .social .facebook a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.wrapper .social .twitter i,
+.wrapper .social .facebook i{
+margin-right: 5px;
+}
